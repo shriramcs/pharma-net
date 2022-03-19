@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { AppUser } from '../models/appuser';
+import { AppUser } from '../Models/app-user';
 import { Observable, of } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/compat/firestore';

@@ -9,7 +9,7 @@ import {
 import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 import { map } from 'rxjs/operators';
-import { AppUser } from '../models/appuser';
+import { AppUser } from '../Models/app-user';
 
 @Injectable({
   providedIn: 'root',
