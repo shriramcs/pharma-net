@@ -1,6 +1,6 @@
 # PharmaNet
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5 as per the repo by [Ankit Sharma](https://github.com/AnkitSharma-007/blogging-app-with-Angular-CloudFirestore)
 
 ## Development server
 
