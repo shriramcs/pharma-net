@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
- import { AppUser } from 'src/app/models/appuser';
-
+import { AppUser } from '../models/appuser';
+import { AuthService } from '../services/auth.service';
+ 
 @Component({
   selector: 'phn-nav-bar',
   templateUrl: './nav-bar.component.html',
