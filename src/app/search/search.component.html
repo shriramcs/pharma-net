@@ -1,0 +1,32 @@
+<form
+  #myForm="ngForm"
+  (ngSubmit)="myForm.form.valid && searchMedicine()"
+  accept-charset="UTF-8"
+  novalidate
+>
+
+    <div style="margin-top: 10px;">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Medicine</mat-label>
+        <input type="text"
+            placeholder="Pick one"
+            aria-label="Medicine"
+            matInput
+            [formControl]="myControl"
+            [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="onMedSelect($event)">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name">
+            {{option.name}} - Rs.{{option.price}} ({{option.count}})
+        </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+    </div>
+</form>
+
+
+<div *ngIf="searching">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<div *ngIf="!searching && medicines?.length">
+  <phn-search-result [searchData]="filteredOptions | async"></phn-search-result>
+</div>

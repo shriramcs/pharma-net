@@ -1,0 +1,93 @@
+<form
+  #myForm="ngForm"
+  (ngSubmit)="myForm.form.valid && saveMedicine()"
+  accept-charset="UTF-8"
+  novalidate
+>
+  <div>
+    Name:
+    <input
+      type="text"
+      class="medicineHeader"
+      placeholder="Medicine Name..."
+      class="form-control"
+      name="medicineName"
+      [(ngModel)]="medicineData.name"
+      required
+      #medicineName="ngModel"
+    />
+    <span class="text-danger" *ngIf="myForm.submitted && medicineName.errors">
+      Required
+    </span>
+  </div>
+  <div>
+    manufacturingDate:
+    <input
+      type="date"
+      class="medicineHeader"
+      placeholder="manufacturingDate..."
+      class="form-control"
+      name="manufacturingDate"
+      [(ngModel)]="medicineData.manufacturingDate"
+      required
+      #manufacturingDate1="ngModel"
+    />
+    <span class="text-danger" *ngIf="myForm.submitted && manufacturingDate1.errors">
+      Required
+    </span>
+  </div>
+  <div>
+    expiryDate:
+    <input
+      type="date"
+      class="medicineHeader"
+      placeholder="expiryDate..."
+      class="form-control"
+      name="expiryDate"
+      [(ngModel)]="medicineData.expiryDate"
+      required
+      #expiryDate="ngModel"
+    />
+    <span class="text-danger" *ngIf="myForm.submitted && expiryDate.errors">
+      Required
+    </span>
+  </div>
+  <div>
+    Count:
+    <input
+      type="number"
+      class="medicineHeader"
+      placeholder="count"
+      class="form-control"
+      name="count"
+      [(ngModel)]="medicineData.count"
+      required
+      #count="ngModel"
+    />
+    <span class="text-danger" *ngIf="myForm.submitted && count.errors">
+      Required
+    </span>
+  </div>
+  <div>
+    price:
+    <input
+      type="number"
+      class="medicineHeader"
+      placeholder="price..."
+      class="form-control"
+      name="price"
+      [(ngModel)]="medicineData.price"
+      required
+      #price="ngModel"
+    />
+    <span class="text-danger" *ngIf="myForm.submitted && price.errors">
+      Required
+    </span>
+  </div>
+  <div class="form-group">
+    <button type="submit" mat-raised-button color="primary">Save</button>
+    <button type=" button" mat-raised-button color="warn" (click)="cancel()">
+      CANCEL
+    </button>
+  </div>
+</form>
